@@ -105,6 +105,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .seq{display:grid;grid-template-columns:repeat(var(--n,5),minmax(0,1fr));width:min(100%,calc(var(--n,5)*24vh + (var(--n,5) - 1)*18px));gap:clamp(8px,1.2vw,18px);margin-top:clamp(28px,4vw,60px)}
 .seq-item{position:relative}
 .seq-img{aspect-ratio:1;background:#fff}
+.seq-img video{width:100%;height:100%;object-fit:contain;background:#fff}
+.vid-ph.sm .pbtn{width:40px;height:40px}.vid-ph.sm .pbtn svg{width:16px;height:16px;margin-left:2px}.vid-ph.sm p{font-size:9px;letter-spacing:.1em}.vid-ph.sm{gap:8px}
 .seq-cap{font-size:clamp(10.5px,.85vw,12px);font-weight:600;margin-top:10px;letter-spacing:.01em}
 .seq-cap b{font-weight:700;color:var(--muted);margin-right:6px}
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:clamp(16px,2vw,32px);margin-top:auto;padding-top:clamp(28px,4vw,56px)}
@@ -436,7 +438,7 @@ body:not(.editing) .is-hidden{display:none}
    "num": "01/",
    "title": "Basement Studio",
    "subtitle": "proposta sequenza classica",
-   "kicker": "Dettaglio delle lavorazioni e post-produzione · 7 still + 1 on model",
+   "kicker": "Dettaglio delle lavorazioni e post-produzione · 7 still + 1 on model + video",
    "seq": [
     {
      "src": "assets/superga-01.jpg",
@@ -469,6 +471,12 @@ body:not(.editing) .is-hidden{display:none}
     {
      "src": "",
      "label": "On model"
+    },
+    {
+     "type": "video",
+     "src": "assets/video-prodotto.mp4",
+     "poster": "assets/superga-01.jpg",
+     "label": "Video"
     }
    ],
    "items": [
@@ -498,11 +506,11 @@ body:not(.editing) .is-hidden{display:none}
    "eyebrow": "Sequenza classica · anteprima e-commerce",
    "title": "Il prodotto sul vostro sito",
    "intro": "7 still, 1 on model e il video prodotto nella scheda prodotto, così come li vedrà il cliente finale.",
-   "url": "superga.com/it/1970-luxe-full-beige-rame",
+   "url": "superga.com/it/century-washed-distressed-cotton-beiges-offwhite",
    "site": "Superga",
    "menu": "DONNA     UOMO     BAMBINI     OUTLET     SCOPRI",
-   "crumb": "Collezione Donna / Nuovi Arrivi Donna / 1970 LUXE - Full Beige Rame",
-   "name": "1970 LUXE",
+   "crumb": "Collezione Donna / Nuovi Arrivi Donna / CENTURY WASHED DISTRESSED COTTON - beiges offwhite",
+   "name": "CENTURY WASHED DISTRESSED COTTON",
    "desc": "Sneakers basse unisex beige con tomaia in pelle scamosciata",
    "rating": "(4)",
    "price": "€150,00",
@@ -530,7 +538,7 @@ body:not(.editing) .is-hidden{display:none}
    ],
    "variants": [
     {
-     "name": "Full Beige Rame",
+     "name": "beiges offwhite",
      "color": "#ac8e6f",
      "media": [
       {
@@ -567,137 +575,8 @@ body:not(.editing) .is-hidden{display:none}
       },
       {
        "type": "video",
-       "src": "",
+       "src": "assets/video-prodotto.mp4",
        "poster": "assets/superga-01.jpg"
-      }
-     ]
-    },
-    {
-     "name": "Full Green Olive",
-     "color": "#675e44",
-     "media": [
-      {
-       "type": "img",
-       "src": "assets/superga-olive-01.jpg"
-      },
-      {
-       "type": "img",
-       "src": "assets/superga-olive-01-int.jpg"
-      },
-      {
-       "type": "img",
-       "src": "assets/superga-olive-02.jpg"
-      },
-      {
-       "type": "img",
-       "src": "assets/superga-olive-03.jpg"
-      },
-      {
-       "type": "img",
-       "src": ""
-      },
-      {
-       "type": "img",
-       "src": "assets/superga-olive-04.jpg"
-      },
-      {
-       "type": "img",
-       "src": "assets/superga-olive-05.jpg"
-      },
-      {
-       "type": "img",
-       "src": ""
-      },
-      {
-       "type": "video",
-       "src": "",
-       "poster": "assets/superga-olive-01.jpg"
-      }
-     ]
-    },
-    {
-     "name": "Full Grey Asphalt",
-     "color": "#4f5152",
-     "media": [
-      {
-       "type": "img",
-       "src": "assets/superga-grey-01.jpg"
-      },
-      {
-       "type": "img",
-       "src": "assets/superga-grey-01-int.jpg"
-      },
-      {
-       "type": "img",
-       "src": "assets/superga-grey-02.jpg"
-      },
-      {
-       "type": "img",
-       "src": "assets/superga-grey-03.jpg"
-      },
-      {
-       "type": "img",
-       "src": ""
-      },
-      {
-       "type": "img",
-       "src": "assets/superga-grey-04.jpg"
-      },
-      {
-       "type": "img",
-       "src": "assets/superga-grey-05.jpg"
-      },
-      {
-       "type": "img",
-       "src": ""
-      },
-      {
-       "type": "video",
-       "src": "",
-       "poster": "assets/superga-grey-01.jpg"
-      }
-     ]
-    },
-    {
-     "name": "Full Brown Chestnut",
-     "color": "#69433e",
-     "media": [
-      {
-       "type": "img",
-       "src": "assets/superga-brown-01.jpg"
-      },
-      {
-       "type": "img",
-       "src": "assets/superga-brown-01-int.jpg"
-      },
-      {
-       "type": "img",
-       "src": "assets/superga-brown-02.jpg"
-      },
-      {
-       "type": "img",
-       "src": "assets/superga-brown-03.jpg"
-      },
-      {
-       "type": "img",
-       "src": ""
-      },
-      {
-       "type": "img",
-       "src": "assets/superga-brown-04.jpg"
-      },
-      {
-       "type": "img",
-       "src": "assets/superga-brown-05.jpg"
-      },
-      {
-       "type": "img",
-       "src": ""
-      },
-      {
-       "type": "video",
-       "src": "",
-       "poster": "assets/superga-brown-01.jpg"
       }
      ]
     }
@@ -710,7 +589,7 @@ body:not(.editing) .is-hidden{display:none}
    "num": "02/",
    "title": "Basement Studio",
    "subtitle": "nostra proposta",
-   "kicker": "Dettaglio delle lavorazioni e post-produzione · 5 still + 2 on model",
+   "kicker": "Dettaglio delle lavorazioni e post-produzione · 5 still + 2 on model + video",
    "seq": [
     {
      "src": "assets/superga-01.jpg",
@@ -739,6 +618,12 @@ body:not(.editing) .is-hidden{display:none}
     {
      "src": "",
      "label": "On model"
+    },
+    {
+     "type": "video",
+     "src": "assets/video-prodotto.mp4",
+     "poster": "assets/superga-01.jpg",
+     "label": "Video"
     }
    ],
    "items": [
@@ -768,11 +653,11 @@ body:not(.editing) .is-hidden{display:none}
    "eyebrow": "La nostra proposta · anteprima e-commerce",
    "title": "Il prodotto sul vostro sito",
    "intro": "5 still, 2 on model e il video prodotto nella scheda prodotto, così come li vedrà il cliente finale.",
-   "url": "superga.com/it/1970-luxe-full-beige-rame",
+   "url": "superga.com/it/century-washed-distressed-cotton-beiges-offwhite",
    "site": "Superga",
    "menu": "DONNA     UOMO     BAMBINI     OUTLET     SCOPRI",
-   "crumb": "Collezione Donna / Nuovi Arrivi Donna / 1970 LUXE - Full Beige Rame",
-   "name": "1970 LUXE",
+   "crumb": "Collezione Donna / Nuovi Arrivi Donna / CENTURY WASHED DISTRESSED COTTON - beiges offwhite",
+   "name": "CENTURY WASHED DISTRESSED COTTON",
    "desc": "Sneakers basse unisex beige con tomaia in pelle scamosciata",
    "rating": "(4)",
    "price": "€150,00",
@@ -800,7 +685,7 @@ body:not(.editing) .is-hidden{display:none}
    ],
    "variants": [
     {
-     "name": "Full Beige Rame",
+     "name": "beiges offwhite",
      "color": "#ac8e6f",
      "media": [
       {
@@ -835,123 +720,6 @@ body:not(.editing) .is-hidden{display:none}
        "type": "video",
        "src": "assets/video-prodotto.mp4",
        "poster": "assets/superga-01.jpg"
-      }
-     ]
-    },
-    {
-     "name": "Full Green Olive",
-     "color": "#675e44",
-     "media": [
-      {
-       "type": "img",
-       "src": "assets/superga-olive-01.jpg"
-      },
-      {
-       "type": "img",
-       "src": "assets/superga-olive-02.jpg"
-      },
-      {
-       "type": "img",
-       "src": "assets/superga-olive-03.jpg"
-      },
-      {
-       "type": "img",
-       "src": "assets/superga-olive-04.jpg"
-      },
-      {
-       "type": "img",
-       "src": "assets/superga-olive-05.jpg"
-      },
-      {
-       "type": "img",
-       "src": ""
-      },
-      {
-       "type": "img",
-       "src": ""
-      },
-      {
-       "type": "video",
-       "src": "",
-       "poster": "assets/superga-olive-01.jpg"
-      }
-     ]
-    },
-    {
-     "name": "Full Grey Asphalt",
-     "color": "#4f5152",
-     "media": [
-      {
-       "type": "img",
-       "src": "assets/superga-grey-01.jpg"
-      },
-      {
-       "type": "img",
-       "src": "assets/superga-grey-02.jpg"
-      },
-      {
-       "type": "img",
-       "src": "assets/superga-grey-03.jpg"
-      },
-      {
-       "type": "img",
-       "src": "assets/superga-grey-04.jpg"
-      },
-      {
-       "type": "img",
-       "src": "assets/superga-grey-05.jpg"
-      },
-      {
-       "type": "img",
-       "src": ""
-      },
-      {
-       "type": "img",
-       "src": ""
-      },
-      {
-       "type": "video",
-       "src": "",
-       "poster": "assets/superga-grey-01.jpg"
-      }
-     ]
-    },
-    {
-     "name": "Full Brown Chestnut",
-     "color": "#69433e",
-     "media": [
-      {
-       "type": "img",
-       "src": "assets/superga-brown-01.jpg"
-      },
-      {
-       "type": "img",
-       "src": "assets/superga-brown-02.jpg"
-      },
-      {
-       "type": "img",
-       "src": "assets/superga-brown-03.jpg"
-      },
-      {
-       "type": "img",
-       "src": "assets/superga-brown-04.jpg"
-      },
-      {
-       "type": "img",
-       "src": "assets/superga-brown-05.jpg"
-      },
-      {
-       "type": "img",
-       "src": ""
-      },
-      {
-       "type": "img",
-       "src": ""
-      },
-      {
-       "type": "video",
-       "src": "",
-       "poster": "assets/superga-brown-01.jpg"
       }
      ]
     }
@@ -1213,8 +981,13 @@ R.pricing=function(s,p){
   return '<div class="split">'+head(p,'right')+'<div class="price-wrap">'+T(p+'.intro','p','lead opt rv','Introduzione')+
     '<div class="price-list">'+rows+'</div>'+LA(p+'.items','Voce')+total+T(p+'.note','p','note opt','Note')+'</div></div>';
 };
+function seqVideo(b,q){
+  var inner=q.src?'<video src="'+esc(q.src)+'"'+(q.poster?' poster="'+esc(q.poster)+'"':'')+' autoplay muted loop playsinline></video>'
+    :'<div class="vid-ph sm">'+(q.poster?'<img src="'+esc(q.poster)+'" alt="">':'')+'<span class="pbtn">'+I.play+'</span><p>'+(editing?'Carica video':'Video')+'</p></div>';
+  return '<figure class="media seq-img contain" data-img="'+b+'.src">'+inner+imgTools(b+'.src','video')+'</figure>';
+}
 R.steps=function(s,p){
-  var seq=s.seq.map(function(q,j){var b=p+'.seq.'+j;return '<figure class="seq-item rv d'+Math.min(j,4)+'"'+LI(p+'.seq',j)+'>'+M(b+'.src','seq-img contain zoomable')+'<figcaption class="seq-cap"><b>'+pad2(j+1)+'</b>'+T(b+'.label','span','','Angolazione')+'</figcaption>'+LC(p+'.seq',j)+'</figure>';}).join('');
+  var seq=s.seq.map(function(q,j){var b=p+'.seq.'+j;return '<figure class="seq-item rv d'+Math.min(j,4)+'"'+LI(p+'.seq',j)+'>'+(q.type==='video'?seqVideo(b,q):M(b+'.src','seq-img contain zoomable'))+'<figcaption class="seq-cap"><b>'+pad2(j+1)+'</b>'+T(b+'.label','span','','Angolazione')+'</figcaption>'+LC(p+'.seq',j)+'</figure>';}).join('');
   var st=s.items.map(function(it,j){var b=p+'.items.'+j;return '<div class="step rv d'+Math.min(j,4)+'"'+LI(p+'.items',j)+'><div class="step-n">'+pad2(j+1)+'</div>'+T(b+'.t','div','step-t','Fase')+T(b+'.d','div','step-d opt','Descrizione')+LC(p+'.items',j)+'</div>';}).join('');
   return head(p,'right')+'<div class="seq" style="--n:'+Math.max(s.seq.length,1)+'">'+seq+'</div>'+LA(p+'.seq','Scatto')+'<div class="steps">'+st+'</div>'+LA(p+'.items','Fase');
 };
@@ -1286,7 +1059,7 @@ R.product=function(s,p,i){
   '<div class="pdp-stage" data-stage="'+i+'">'+stage+(media.length>1?'<button class="stage-nav prev" data-step="'+i+'" data-d="-1" aria-label="Precedente">'+I.l+'</button><button class="stage-nav next" data-step="'+i+'" data-d="1" aria-label="Successiva">'+I.r+'</button><span class="stage-count">'+(st.m+1)+' / '+media.length+'</span>':'')+'</div></div>'+'<div class="pdp-track" data-track="'+i+'">'+track+'</div><div class="pt-dots">'+dots+'</div>'+mediaAdd+'</div>'+
   '<div class="pdp-info">'+T(p+'.name','h3','pdp-name','Nome prodotto')+T(vp+'.name','div','pdp-variant','Variante')+T(p+'.desc','p','pdp-desc opt','Descrizione')+
   '<div class="pdp-rating"><span class="stars">★★★★★</span>'+T(p+'.rating','span','','(0)')+'</div>'+T(p+'.price','div','pdp-price','€')+
-  T(p+'.colorLabel','div','pdp-label','Colore')+'<div class="swatches">'+sw+'</div>'+swEdit+
+  (s.variants.length>1?T(p+'.colorLabel','div','pdp-label','Colore')+'<div class="swatches">'+sw+'</div>'+swEdit:'')+
   '<div class="pdp-row">'+T(p+'.sizeLabel','div','pdp-label','Taglia')+'<span class="guide">'+I.pen+T(p+'.guide','span','','Guida')+'</span></div>'+
   '<div class="sizes">'+sizes+'</div>'+sizeEdit+
   '<div class="cta-row"><button class="cta'+(st.size?' ready':'')+'" data-cta="'+i+'">'+esc(st.size?s.ctaOn:s.cta)+'</button><button class="wish'+(st.wish?' on':'')+'" data-wish="'+i+'" aria-label="Preferiti">'+I.heart+'</button></div>'+
@@ -1339,6 +1112,14 @@ function renderUI(){
     '<div class="lb" id="lb"><img alt=""><button class="lb-x" data-lb="x">Chiudi ✕</button><button class="lb-p" data-lb="p">'+I.l+'</button><button class="lb-n" data-lb="n">'+I.r+'</button><span class="lb-c"></span></div>'+
     '<div class="toast" id="toast"></div>'+bar;
 }
+
+/* ---------- video mancante: mostra il segnaposto ---------- */
+document.addEventListener('error',function(e){
+  var v=e.target; if(!v||v.tagName!=='VIDEO') return;
+  var ph=document.createElement('div'); ph.className='vid-ph'+(v.closest('.seq-img')?' sm':'');
+  var pv=v.getAttribute('poster'); ph.innerHTML=(pv?'<img src="'+esc(pv)+'" alt="">':'')+'<span class="pbtn">'+I.play+'</span><p>Video prodotto</p>';
+  v.replaceWith(ph);
+},true);
 
 /* ---------- mobile product carousel ---------- */
 function trackItemLeft(t,k){var it=t.children[k];return it?it.offsetLeft-(t.clientWidth-it.clientWidth)/2:0;}
@@ -1537,7 +1318,7 @@ function editClick(e){
     else{if(s.variants.length<2){undoStack.pop();toast('Serve almeno una variante');return;}s.variants.splice(st.v,1);st.v=Math.max(0,st.v-1);}
     st.m=0;markDirty();rerenderSlide(i);return;}
   if((b=t.closest('[data-imgact]'))){e.preventDefault();e.stopPropagation();var fig=b.closest('[data-img]');pickAndStore(b.dataset.p,b.dataset.imgact==='video'?'video/*':'image/*',fig);return;}
-  if((b=t.closest('[data-img]'))&&!t.closest('[data-k]')&&!t.closest('.li-ctrl')&&!t.closest('video')){var p=b.dataset.img;var isVid=/\.media\.\d+\.src$/.test(p)&&(get(p.replace(/\.src$/,''))||{}).type==='video';pickAndStore(p,isVid?'video/*':'image/*',b);return;}
+  if((b=t.closest('[data-img]'))&&!t.closest('[data-k]')&&!t.closest('.li-ctrl')&&!t.closest('video')){var p=b.dataset.img;var isVid=/\.src$/.test(p)&&(get(p.replace(/\.src$/,''))||{}).type==='video';pickAndStore(p,isVid?'video/*':'image/*',b);return;}
   if((b=t.closest('[data-ed]'))) edAct(b.dataset.ed);
 }
 document.addEventListener('click',function(e){var b=e.target.closest('[data-ed]');if(b&&!editing&&b.dataset.ed==='enter')edAct('enter');});
@@ -1623,8 +1404,8 @@ document.addEventListener('dragleave',function(e){var f=e.target.closest&&e.targ
 document.addEventListener('drop',function(e){
   if(!editing)return; var f=e.target.closest&&e.target.closest('[data-img]'); if(!f)return; e.preventDefault(); f.classList.remove('drop');
   var file=e.dataTransfer.files&&e.dataTransfer.files[0]; if(!file)return;
-  var p=f.dataset.img; if(/^video\//.test(file.type)&&!/\.media\.\d+\.src$/.test(p)){toast('Qui va un’immagine');return;}
-  if(/\.media\.\d+\.src$/.test(p)){var it=get(p.replace(/\.src$/,''));if(it&&/^video\//.test(file.type))it.type='video';else if(it&&/^image\//.test(file.type)&&it.type==='video'){p=p.replace(/\.src$/,'.poster');}}
+  var p=f.dataset.img, itm=/\.src$/.test(p)?get(p.replace(/\.src$/,'')):null; if(/^video\//.test(file.type)&&!(itm&&itm.type)){toast('Qui va un’immagine');return;}
+  if(itm&&itm.type){var it=get(p.replace(/\.src$/,''));if(it&&/^video\//.test(file.type))it.type='video';else if(it&&/^image\//.test(file.type)&&it.type==='video'){p=p.replace(/\.src$/,'.poster');}}
   putFile(p,file,f);
 });
 
