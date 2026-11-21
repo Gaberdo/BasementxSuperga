@@ -206,6 +206,14 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .term{position:relative;background:var(--grey);padding:18px 18px 20px;border-radius:2px}
 .term-t{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
 .term-d{font-size:13.5px;line-height:1.55;color:#444;margin-top:10px}
+.ob-total{border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);margin-top:10px;padding:18px 0}
+.ob-total:hover{background:transparent;padding-left:0;padding-right:0}
+.ob-total .ob-t{font-size:clamp(16px,1.4vw,21px);text-transform:uppercase;letter-spacing:.01em}
+.ob-total .ob-inc{font-size:13px;color:#333;font-weight:500}
+.ob-total .ob-price{font-size:clamp(26px,2.6vw,40px);letter-spacing:-.01em}
+.ob-old{display:block;font-size:15px;font-weight:500;color:#9a9a9a;text-decoration:line-through}
+.oc-xt{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-top:26px}
+.oc-x{font-size:13px;color:#555;line-height:1.65;margin-top:8px}
 .offer-foot{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-top:auto;padding-top:clamp(24px,3vw,44px);font-size:13px}
 .offer-foot .of-note{color:#777;max-width:70ch;line-height:1.5}
 .offer-foot .of-sign{text-align:right;line-height:1.5;margin-left:auto}
@@ -742,39 +750,36 @@ body:not(.editing) .is-hidden{display:none}
       {
        "t": "Still life",
        "inc": "incl. post + stylist + logistica",
-       "det": "Stylist: 12 €\nPostproduzione: 13 €",
-       "price": "80 €",
+       "det": "",
+       "price": "85 €",
        "unit": "x SKU still life"
       },
       {
        "t": "On model",
        "inc": "incl. post + stylist + logistica",
-       "det": "Stylist: 2,5 €\nPostproduzione: 2 €",
-       "price": "12 €",
-       "unit": "x scatto singolo on model"
-      },
-      {
-       "t": "Modello",
-       "inc": "profilo premium internazionale",
        "det": "",
-       "price": "6 / 11,5 €",
-       "unit": ""
+       "price": "14 €",
+       "unit": "x scatto singolo on model"
       },
       {
        "t": "Video e-commerce",
        "inc": "incl. post + stylist + logistica",
        "det": "",
-       "price": "70 €",
+       "price": "75 €",
        "unit": "x video singolo on model"
       },
       {
-       "t": "Modello video",
-       "inc": "profilo premium internazionale",
+       "t": "SKU completa",
+       "inc": "7 scatti still life + 1 scatto on model",
        "det": "",
-       "price": "24 / 32 €",
-       "unit": ""
+       "priceOld": "174 €",
+       "price": "165 €",
+       "unit": "x SKU",
+       "hl": true
       }
-     ]
+     ],
+     "extraTitle": "Costi medi",
+     "extra": "Stylist: 120/180 € a giornata\nPostproduzione: 12/18 € a SKU\nModello: 400/600 € a giornata\n(profilo premium internazionale, escluse eventuali spese di viaggio)"
     },
     {
      "tag": "Test 2",
@@ -784,25 +789,36 @@ body:not(.editing) .is-hidden{display:none}
       {
        "t": "Still life",
        "inc": "incl. post + stylist + logistica",
-       "det": "Stylist: 10 €\nPostproduzione: 11 €",
-       "price": "63 €",
+       "det": "",
+       "price": "68 €",
        "unit": "x SKU still life"
       },
       {
        "t": "On model",
        "inc": "incl. post + stylist + logistica",
-       "det": "Stylist: 5 €\nPostproduzione: 4 €",
-       "price": "20 €",
+       "det": "",
+       "price": "24 €",
        "unit": "x SKU on model"
       },
       {
-       "t": "Modello",
-       "inc": "profilo premium internazionale",
+       "t": "Video e-commerce",
+       "inc": "incl. post + stylist + logistica",
        "det": "",
-       "price": "6 / 11,5 €",
-       "unit": ""
+       "price": "75 €",
+       "unit": "x video singolo on model"
+      },
+      {
+       "t": "SKU completa",
+       "inc": "5 scatti still life + 2 scatti on model",
+       "det": "",
+       "priceOld": "167 €",
+       "price": "155 €",
+       "unit": "x SKU",
+       "hl": true
       }
-     ]
+     ],
+     "extraTitle": "Costi medi",
+     "extra": "Stylist: 120/180 € a giornata\nPostproduzione: 12/18 € a SKU\nModello: 400/600 € a giornata\n(profilo premium internazionale, escluse eventuali spese di viaggio)"
     }
    ],
    "note": "",
@@ -1015,8 +1031,8 @@ R.thanks=function(s,p){
 };
 R.offer=function(s,p){
   var cols=s.cols.map(function(c,j){var cp=p+'.cols.'+j;
-    var bl=c.blocks.map(function(b,k){var bp=cp+'.blocks.'+k;return '<div class="ob"'+LI(cp+'.blocks',k)+'><div>'+T(bp+'.t','div','ob-t','Voce')+T(bp+'.inc','div','ob-inc opt','Incluso')+T(bp+'.det','div','ob-det opt','Dettaglio')+'</div><div class="ob-p">'+T(bp+'.price','div','ob-price','€')+T(bp+'.unit','div','ob-unit opt','unità')+'</div>'+LC(cp+'.blocks',k)+'</div>';}).join('');
-    return '<div class="offer-col rv d'+Math.min(j+1,4)+'"'+LI(p+'.cols',j)+'>'+T(cp+'.tag','div','oc-tag opt','Etichetta')+T(cp+'.name','div','oc-name','Nome opzione')+T(cp+'.desc','div','oc-desc opt','Descrizione')+'<div class="oc-blocks">'+bl+'</div>'+LA(cp+'.blocks','Voce')+LC(p+'.cols',j)+'</div>';}).join('');
+    var bl=c.blocks.map(function(b,k){var bp=cp+'.blocks.'+k;return '<div class="ob'+(b.hl?' ob-total':'')+'"'+LI(cp+'.blocks',k)+'><div>'+T(bp+'.t','div','ob-t','Voce')+T(bp+'.inc','div','ob-inc opt','Incluso')+T(bp+'.det','div','ob-det opt','Dettaglio')+'</div><div class="ob-p">'+T(bp+'.priceOld','s','ob-old opt','prezzo barrato')+T(bp+'.price','div','ob-price','€')+T(bp+'.unit','div','ob-unit opt','unità')+'</div>'+LC(cp+'.blocks',k)+'</div>';}).join('');
+    return '<div class="offer-col rv d'+Math.min(j+1,4)+'"'+LI(p+'.cols',j)+'>'+T(cp+'.tag','div','oc-tag opt','Etichetta')+T(cp+'.name','div','oc-name','Nome opzione')+T(cp+'.desc','div','oc-desc opt','Descrizione')+'<div class="oc-blocks">'+bl+'</div>'+LA(cp+'.blocks','Voce')+T(cp+'.extraTitle','div','oc-xt opt','Titolo nota')+T(cp+'.extra','div','oc-x opt','Nota')+LC(p+'.cols',j)+'</div>';}).join('');
   return head(p,'right')+'<div class="offer-grid" style="--n:'+Math.max(s.cols.length,1)+'">'+cols+'</div>'+LA(p+'.cols','Colonna')+
     (function(){var ts=(s.terms||[]).map(function(t,k){var tp=p+'.terms.'+k;return '<div class="term"'+LI(p+'.terms',k)+'>'+T(tp+'.t','div','term-t','Titolo')+T(tp+'.d','div','term-d','Testo')+LC(p+'.terms',k)+'</div>';}).join('');return (ts?'<div class="terms rv">'+ts+'</div>':'')+LA(p+'.terms','Condizione');})()+'<div class="offer-foot rv">'+T(p+'.note','div','of-note opt','Note')+'<div class="of-sign">'+T(p+'.place','div','opt','Luogo e data')+T(p+'.sign','div','opt','Firme')+'</div></div>';
 };
